@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && chmod 755 build/index.js"
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node22 --outfile=dist/index.js --minify --format=esm"
   },
   "files": [
     "build"
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@types/node": "^24.0.15",
     "@types/xml2js": "^0.4.14",
+    "esbuild": "0.25.8",
     "typescript": "^5.8.3"
   }
 }
