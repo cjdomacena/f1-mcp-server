@@ -1,5 +1,5 @@
 {
-  "clientId": "28aa8cbe-8cbe-5a8cbe923f8-8a8cbe923f81306-81306203",
+  "clientId": "a7856938-6938-5569383c07a-8569383c07a4fd9-a4fd994f",
   "currentIndex": 0,
   "tabs": [
     {
@@ -15,8 +15,10 @@
           "edges": [],
           "views": []
         },
-        "formData": {},
-        "currentToolName": "get_seasons",
+        "formData": {
+          "season": 0
+        },
+        "currentToolName": "get_season",
         "lastToolCallResponse": {
           "content": [
             {
