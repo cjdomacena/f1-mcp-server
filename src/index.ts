@@ -2,6 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { getSeasons } from "./utils/endpoint_helpers.js";
 import { z } from "zod";
+import makeF1Request from "./helpers/api.js";
 
 const server = new McpServer({
   name: "F1 MCP Server",
@@ -16,8 +17,7 @@ server.tool("get_seasons", "Get list of seasons", async () => {
   const url = new URL(getSeasons());
   url.searchParams.set("format", "json");
 
-  const res = await fetch(url.toString());
-  const data = await res.json();
+  const data: any = await makeF1Request(getSeasons());
 
   return {
     content: [
@@ -40,11 +40,7 @@ server.tool(
       .describe("If empty, it will default to current season"),
   },
   async ({ season }) => {
-    const url = new URL(getSeasons(season));
-    url.searchParams.set("format", "json");
-
-    const res = await fetch(url.toString());
-    const data = await res.json();
+    const data: any = await makeF1Request(getSeasons(season));
 
     return {
       content: [

@@ -1,6 +1,8 @@
 export default async function makeF1Request<T>(url: string): Promise<T | null> {
   try {
-    const response = await fetch(`${url}?format=json`);
+    let finalUrl = new URL(url);
+    finalUrl.searchParams.set("format", "json");
+    const response = await fetch(finalUrl.toString());
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
