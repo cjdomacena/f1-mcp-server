@@ -1,0 +1,149 @@
+{
+  "clientId": "28aa8cbe-8cbe-5a8cbe923f8-8a8cbe923f81306-81306203",
+  "currentIndex": 0,
+  "tabs": [
+    {
+      "name": "Tools",
+      "icon": "icon-tool",
+      "type": "blank",
+      "componentIndex": 2,
+      "storage": {
+        "activeNames": [
+          0
+        ],
+        "autoDetectDiagram": {
+          "edges": [],
+          "views": []
+        },
+        "formData": {},
+        "currentToolName": "get_seasons",
+        "lastToolCallResponse": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"MRData\":{\"xmlns\":\"\",\"series\":\"f1\",\"url\":\"https://api.jolpi.ca/ergast/f1/seasons/\",\"limit\":\"30\",\"offset\":\"50\",\"total\":\"76\",\"SeasonTable\":{\"Seasons\":[{\"season\":\"2000\",\"url\":\"https://en.wikipedia.org/wiki/2000_Formula_One_World_Championship\"},{\"season\":\"2001\",\"url\":\"https://en.wikipedia.org/wiki/2001_Formula_One_World_Championship\"},{\"season\":\"2002\",\"url\":\"https://en.wikipedia.org/wiki/2002_Formula_One_World_Championship\"},{\"season\":\"2003\",\"url\":\"https://en.wikipedia.org/wiki/2003_Formula_One_World_Championship\"},{\"season\":\"2004\",\"url\":\"https://en.wikipedia.org/wiki/2004_Formula_One_World_Championship\"},{\"season\":\"2005\",\"url\":\"https://en.wikipedia.org/wiki/2005_Formula_One_World_Championship\"},{\"season\":\"2006\",\"url\":\"https://en.wikipedia.org/wiki/2006_Formula_One_World_Championship\"},{\"season\":\"2007\",\"url\":\"https://en.wikipedia.org/wiki/2007_Formula_One_World_Championship\"},{\"season\":\"2008\",\"url\":\"https://en.wikipedia.org/wiki/2008_Formula_One_World_Championship\"},{\"season\":\"2009\",\"url\":\"https://en.wikipedia.org/wiki/2009_Formula_One_World_Championship\"},{\"season\":\"2010\",\"url\":\"https://en.wikipedia.org/wiki/2010_Formula_One_World_Championship\"},{\"season\":\"2011\",\"url\":\"https://en.wikipedia.org/wiki/2011_Formula_One_World_Championship\"},{\"season\":\"2012\",\"url\":\"https://en.wikipedia.org/wiki/2012_Formula_One_World_Championship\"},{\"season\":\"2013\",\"url\":\"https://en.wikipedia.org/wiki/2013_Formula_One_World_Championship\"},{\"season\":\"2014\",\"url\":\"https://en.wikipedia.org/wiki/2014_Formula_One_World_Championship\"},{\"season\":\"2015\",\"url\":\"https://en.wikipedia.org/wiki/2015_Formula_One_World_Championship\"},{\"season\":\"2016\",\"url\":\"https://en.wikipedia.org/wiki/2016_Formula_One_World_Championship\"},{\"season\":\"2017\",\"url\":\"https://en.wikipedia.org/wiki/2017_Formula_One_World_Championship\"},{\"season\":\"2018\",\"url\":\"https://en.wikipedia.org/wiki/2018_Formula_One_World_Championship\"},{\"season\":\"2019\",\"url\":\"https://en.wikipedia.org/wiki/2019_Formula_One_World_Championship\"},{\"season\":\"2020\",\"url\":\"https://en.wikipedia.org/wiki/2020_Formula_One_World_Championship\"},{\"season\":\"2021\",\"url\":\"https://en.wikipedia.org/wiki/2021_Formula_One_World_Championship\"},{\"season\":\"2022\",\"url\":\"https://en.wikipedia.org/wiki/2022_Formula_One_World_Championship\"},{\"season\":\"2023\",\"url\":\"https://en.wikipedia.org/wiki/2023_Formula_One_World_Championship\"},{\"season\":\"2024\",\"url\":\"https://en.wikipedia.org/wiki/2024_Formula_One_World_Championship\"},{\"season\":\"2025\",\"url\":\"https://en.wikipedia.org/wiki/2025_Formula_One_World_Championship\"}]}}}"
+            }
+          ],
+          "structuredContent": {
+            "MRData": {
+              "xmlns": "",
+              "series": "f1",
+              "url": "https://api.jolpi.ca/ergast/f1/seasons/",
+              "limit": "30",
+              "offset": "50",
+              "total": "76",
+              "SeasonTable": {
+                "Seasons": [
+                  {
+                    "season": "2000",
+                    "url": "https://en.wikipedia.org/wiki/2000_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2001",
+                    "url": "https://en.wikipedia.org/wiki/2001_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2002",
+                    "url": "https://en.wikipedia.org/wiki/2002_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2003",
+                    "url": "https://en.wikipedia.org/wiki/2003_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2004",
+                    "url": "https://en.wikipedia.org/wiki/2004_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2005",
+                    "url": "https://en.wikipedia.org/wiki/2005_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2006",
+                    "url": "https://en.wikipedia.org/wiki/2006_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2007",
+                    "url": "https://en.wikipedia.org/wiki/2007_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2008",
+                    "url": "https://en.wikipedia.org/wiki/2008_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2009",
+                    "url": "https://en.wikipedia.org/wiki/2009_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2010",
+                    "url": "https://en.wikipedia.org/wiki/2010_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2011",
+                    "url": "https://en.wikipedia.org/wiki/2011_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2012",
+                    "url": "https://en.wikipedia.org/wiki/2012_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2013",
+                    "url": "https://en.wikipedia.org/wiki/2013_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2014",
+                    "url": "https://en.wikipedia.org/wiki/2014_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2015",
+                    "url": "https://en.wikipedia.org/wiki/2015_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2016",
+                    "url": "https://en.wikipedia.org/wiki/2016_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2017",
+                    "url": "https://en.wikipedia.org/wiki/2017_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2018",
+                    "url": "https://en.wikipedia.org/wiki/2018_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2019",
+                    "url": "https://en.wikipedia.org/wiki/2019_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2020",
+                    "url": "https://en.wikipedia.org/wiki/2020_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2021",
+                    "url": "https://en.wikipedia.org/wiki/2021_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2022",
+                    "url": "https://en.wikipedia.org/wiki/2022_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2023",
+                    "url": "https://en.wikipedia.org/wiki/2023_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2024",
+                    "url": "https://en.wikipedia.org/wiki/2024_Formula_One_World_Championship"
+                  },
+                  {
+                    "season": "2025",
+                    "url": "https://en.wikipedia.org/wiki/2025_Formula_One_World_Championship"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
