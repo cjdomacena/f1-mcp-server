@@ -1,66 +1,43 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { getSeasons } from "./utils/endpoint_helpers.js";
-import { z } from "zod";
-import makeF1Request from "./helpers/api.js";
+import { mcpServer } from "@mcp/index.js";
+import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
+import { config } from "dotenv";
+import express, { Request, Response } from "express";
 
-const server = new McpServer({
-  name: "F1 MCP Server",
-  version: "1.0.0",
-  capabilities: {
-    resources: {},
-    tools: {},
-  },
+config();
+const app = express();
+const port = process.env.PORT;
+
+const transportMap = new Map<string, SSEServerTransport>();
+
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello");
 });
 
-server.tool("get_seasons", "Get list of seasons", async () => {
-  const url = new URL(getSeasons());
-  url.searchParams.set("format", "json");
-
-  const data: any = await makeF1Request(getSeasons());
-
-  return {
-    content: [
-      {
-        type: "text",
-        text: JSON.stringify(data),
-      },
-    ],
-    structuredContent: data,
-  };
+app.get("/sse", async (req: Request, res: Response) => {
+  const transport = new SSEServerTransport("/messages", res);
+  transportMap.set(transport.sessionId, transport);
+  await mcpServer.connect(transport);
 });
 
-server.tool(
-  "get_season",
-  "Get specific information of a season",
-  {
-    season: z
-      .number()
-      .optional()
-      .describe("If empty, it will default to current season"),
-  },
-  async ({ season }) => {
-    const data: any = await makeF1Request(getSeasons(season));
-
-    return {
-      content: [
-        {
-          type: "text",
-          text: JSON.stringify(data),
-        },
-      ],
-      structuredContent: data,
-    };
+app.post("/messages", (req: Request, res: Response) => {
+  const sessionId = req.query.sessionId as string;
+  if (!sessionId) {
+    console.error("No session ID");
+    res.status(400).json({ error: "No session id found" });
+    return;
   }
-);
 
-async function main() {
-  const transport = new StdioServerTransport();
-  await server.connect(transport);
-  console.error("F1 MCP Server running on stdio");
-}
+  const transportForSessionId = transportMap.get(sessionId);
 
-main().catch((error) => {
-  console.error("Fatal error in main(): ", error);
-  process.exit(1);
+  if (!transportForSessionId) {
+    console.error("No session ID");
+    res.status(400).json({ error: "No session id found" });
+    return;
+  }
+
+  transportForSessionId.handlePostMessage(req, res);
+});
+
+app.listen(port, () => {
+  console.log(`RUnning on port ${port}`);
 });

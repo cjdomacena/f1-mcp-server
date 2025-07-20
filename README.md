@@ -17,8 +17,10 @@
 ### Usage
 
 - Clone this repo and `npm i`
-- Run `npm build`
-- Follow guide (https://modelcontextprotocol.io/quickstart/server#macos%2Flinux) Or you can use https://open-vsx.org/vscode/item?itemName=kirigaya.openmcp
+- Running in dev `npm run inspect`
+  - This will create a build,
+  - Run the express server that serves our mcp server
+  - Launch Anthropic's mcp inspector
 
 ### Roadmap
 
